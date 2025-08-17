@@ -119,6 +119,11 @@
                       <td width="50px">:</td>
                       <td><?= $d['cara_perolehan']; ?></td>
                     </tr>
+                    <tr>
+                      <td width="100px">Jenis Aset</td>
+                      <td width="50px">:</td>
+                      <td><?= $d['jenis_bantuan']; ?></td>
+                    </tr>
                   <?php } ?>
                 </tbody>
               </table>

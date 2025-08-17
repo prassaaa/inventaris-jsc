@@ -65,7 +65,17 @@
                       <textarea name="faktor" class="textarea form-control" required></textarea>
                     </div>
                   </div>
-
+                  <div class="form-group row">
+                    <label for="kondisi" class="col-sm-4 col-form-label">Kondisi Aset</label>
+                    <div class="col-sm-6">
+                      <select name="kondisi" class="form-control" required>
+                        <option value="">- Pilih --</option>
+                        <option value="Baik">Baik</option>
+                        <option value="Renovasi">Renovasi</option>
+                        <option value="Rusak">Rusak</option>
+                      </select>
+                    </div>
+                  </div>
                   <div class="form-group row">
                     <label for="pemeliharaan" class="col-sm-4 col-form-label">Pemeliharaan yang harus dilakukan</label>
                     <div class="col-sm-6">
@@ -79,15 +89,15 @@
                     </div>
                   </div> 
                   <div class="form-group row">
-                    <label for="foto" class="col-sm-4 col-form-label">Foto Fisik Aset</label>
+                    <label for="foto" class="col-sm-4 col-form-label">Foto Fisik Aset <small>(Opsional)</small></label>
                     <div class="col-sm-6">
                      <div class="input-group">
                       <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="foto" name="foto" accept="image/*" required>
-                        <label class="custom-file-label" for="exampleInputFile">Pilih Gambar</label>
+                        <input type="file" class="custom-file-input" id="foto" name="foto" accept="image/gif,image/jpeg,image/jpg,image/png">
+                        <label class="custom-file-label" for="exampleInputFile">Pilih Gambar (JPG, JPEG, PNG, GIF)</label>
                       </div>
                     </div>
-                    </div>        
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
