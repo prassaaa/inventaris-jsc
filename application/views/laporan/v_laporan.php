@@ -52,11 +52,12 @@
                     <div class="col-4">
                       <select name="tahun_perolehan" class="form-control" required>
                         <option value="">- Tahun Perolehan --</option>
-                        <?php 
+                        <option value="semua">Semua Tahun</option>
+                        <?php
                         for($i = 2010 ; $i <= date('Y'); $i++){
                           echo "<option value='$i'>$i</option>";
                         }
-                        ?>                          
+                        ?>
                       </select>
                     </div>
                     <div class="col">

@@ -21,19 +21,19 @@
 			<div class="col-md-2">
 				<img src="<?= base_url() ?>src/img/logo/logo.png" class="kiri" alt="">
 			</div>
-			<div class="col-md-10 text-center">
-				<h2>PEMERINTAH PROVINSI SULAWESI TENGAH</h2>
-				<h3>DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL</h3>
-				<p>Jl. Pramuka No.21 TELP. (0451) 483400-483443 <br>
-					<strong>e-mail:disdukcapilsultengprov@gmail.com</strong>
+			<div class="col-md-10 text-center header-inventaris">
+				<h1><strong>INVENTARIS JSC</strong></h1>
+				<h3>SISTEM INFORMASI INVENTARISASI ASET</h3>
+				<p>Jl. Contoh Alamat No.123 TELP. (0451) 123456 <br>
+					<strong>e-mail: info@inventarisjsc.com</strong>
 				</p>
-				<h2>PALU</h2>
 			</div>
 		</div>
 		<hr style="border: 1px solid black;">
 		<div class="row">
 			<div class="col text-center">
-				<strong>Aset <?= $lokasi['nama_lokasi'] ?></strong>
+				<strong>Aset <?= $lokasi['nama_lokasi'] ?></strong><br>
+				<small>Tahun Perolehan: <?= ($this->uri->segment(4) == 'semua') ? 'Semua Tahun' : $this->uri->segment(4) ?></small>
 			</div>
 		</div>
 		<div class="row pt-3">

@@ -11,9 +11,14 @@ class ModelLaporan extends CI_Model {
 		$this->db->where('volume !=', 0);
 		$this->db->where('volume >', 0);
 		$this->db->where('id_lokasi', $id_lokasi);
-		$this->db->where('tahun_perolehan', $tahun_perolehan);
+
+		// Jika tahun perolehan bukan "semua", tambahkan filter tahun
+		if($tahun_perolehan != 'semua') {
+			$this->db->where('tahun_perolehan', $tahun_perolehan);
+		}
+
 		$query = $this->db->get();
-		return $query->result_array(); 
+		return $query->result_array();
 	}
 
 	public function getAsetWujudExcel($id_lokasi,$tahun_perolehan)
@@ -24,9 +29,14 @@ class ModelLaporan extends CI_Model {
 		$this->db->where('volume !=', 0);
 		$this->db->where('volume >', 0);
 		$this->db->where('id_lokasi', $id_lokasi);
-		$this->db->where('tahun_perolehan', $tahun_perolehan);
+
+		// Jika tahun perolehan bukan "semua", tambahkan filter tahun
+		if($tahun_perolehan != 'semua') {
+			$this->db->where('tahun_perolehan', $tahun_perolehan);
+		}
+
 		$query = $this->db->get();
-		return $query->result(); 
+		return $query->result();
 	}
 
 	public function getAsetDihapuskan($id_lokasi,$tahun_perolehan)
@@ -36,9 +46,14 @@ class ModelLaporan extends CI_Model {
 		$this->db->join('asets b', 'b.id_aset = a.id_aset');
 		$this->db->join('barang c', 'c.id_barang = b.id_barang');
 		$this->db->where('id_lokasi', $id_lokasi);
-		$this->db->where('tahun_perolehan', $tahun_perolehan);
+
+		// Jika tahun perolehan bukan "semua", tambahkan filter tahun
+		if($tahun_perolehan != 'semua') {
+			$this->db->where('tahun_perolehan', $tahun_perolehan);
+		}
+
 		$query = $this->db->get();
-		return $query->result_array(); 
+		return $query->result_array();
 	}
 
 	public function getAsetDihapuskanExcel($id_lokasi,$tahun_perolehan)
@@ -48,9 +63,14 @@ class ModelLaporan extends CI_Model {
 		$this->db->join('asets b', 'b.id_aset = a.id_aset');
 		$this->db->join('barang c', 'c.id_barang = b.id_barang');
 		$this->db->where('id_lokasi', $id_lokasi);
-		$this->db->where('tahun_perolehan', $tahun_perolehan);
+
+		// Jika tahun perolehan bukan "semua", tambahkan filter tahun
+		if($tahun_perolehan != 'semua') {
+			$this->db->where('tahun_perolehan', $tahun_perolehan);
+		}
+
 		$query = $this->db->get();
-		return $query->result(); 
+		return $query->result();
 	}
 
 	public function getAsetQr($id_lokasi,$tahun_perolehan)
@@ -61,10 +81,15 @@ class ModelLaporan extends CI_Model {
 		$this->db->where('volume !=', 0);
 		$this->db->where('volume >', 0);
 		$this->db->where('id_lokasi', $id_lokasi);
-		$this->db->where('tahun_perolehan', $tahun_perolehan);
+
+		// Jika tahun perolehan bukan "semua", tambahkan filter tahun
+		if($tahun_perolehan != 'semua') {
+			$this->db->where('tahun_perolehan', $tahun_perolehan);
+		}
+
 		$this->db->where('qr_code !=', NULL);
 		$query = $this->db->get();
-		return $query->result_array(); 
+		return $query->result_array();
 	}
 
 	public function getLokasi()
