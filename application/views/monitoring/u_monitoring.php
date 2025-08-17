@@ -67,12 +67,7 @@
                       <textarea name="faktor" class="textarea form-control" required><?=$mt['faktor']?></textarea>
                     </div>
                   </div>
-                  <div class="form-group row">
-                    <label for="monitoring" class="col-sm-4 col-form-label">Monitoring</label>
-                    <div class="col-sm-6">
-                      <textarea name="monitoring" class="textarea form-control" required><?=$mt['monitoring']?></textarea>
-                    </div>
-                  </div>
+
                   <div class="form-group row">
                     <label for="pemeliharaan" class="col-sm-4 col-form-label">Pemeliharaan yang harus dilakukan</label>
                     <div class="col-sm-6">
